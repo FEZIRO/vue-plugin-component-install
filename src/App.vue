@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="notice-btn" @click="notice">点击通知</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods:{
+    notice(){
+      this.$Notice({
+        type:'normal',
+        text:'我是全局通知！',
+        delay: 1500
+      })
+    },
   }
 }
 </script>
@@ -24,5 +27,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  .notice-btn{
+    padding: 30px;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: rgba(#000, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+  }
 }
 </style>

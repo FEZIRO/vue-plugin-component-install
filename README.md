@@ -61,4 +61,5 @@ this.$Notice({
   delay: 1500
 })
 ``````
-
+<br>
+code by FEZIRO
